@@ -1,0 +1,15 @@
+<%= render 'shared/errors', obj: @category %>
+
+<div class="well">
+  <%= form_for @category do |f| %>
+    <div class="control-group">
+      <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>  
+      </p>
+      <p>
+        <%= f.submit class: "btn btn-success" %>
+      </p>
+    <% end %>
+  </div>
+</div>

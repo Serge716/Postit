@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="span8 well">
+    <%= render post.categories %>
+    <h4><%= link_to post.title, fix_url(post.url) %></h4>
+    <p><%= post.description %></p>
+    <p>
+      <small>posted at <%= display_datetime(post.created_at) %> by: <%= post.creator.username %></small>
+    </p>
+    <small>
+      <span>
+        <%= link_to pluralize(post.comments.size, 'comment'), post %><br>
+        <%= link_to 'Edit', edit_post_path(post) %>
+      </span>
+    </small>
+  </div>
+</div>
